@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+<body>
+
+    Window prompt() Method
+
+    <script>
+        console.log("Hello world")
+
+        let firstValue = parseInt(prompt("Please enter a number")); 
+        let operator = prompt("Please enter an operator"); 
+        let secondValue = parseInt(prompt("Please enter an number")); 
+
+        console.log("firstValue: ",firstValue)
+        console.log("operator: ", operator)
+        console.log("secondValue: ",secondValue)
+
+
+        // if (operator === "+") {
+        //     console.log("First result", firstValue + secondValue)
+        // } else {
+        //     console.log("Else", firstValue - secondValue)
+        // }
+
+        function calculate(a, b, operator){
+
+            console.log("INSIDE FUNCTION", a, b, operator)
+            switch (operator) {
+            case "+": 
+                console.log("Result: ", a + b); 
+                break; 
+            case "-": 
+                console.log("Result: ", a - b); 
+                break; 
+            case "/": 
+                console.log("Result: ", a / b); 
+                break; 
+            case "*": 
+                console.log("Result: ", a * b); 
+                break; 
+            default: 
+                console.log("Invalide operator"); 
+            }
+        }
+
+        
+        console.log(calculate(firstValue, secondValue, operator))
+
+    </script>
+    
+</body>
+</html>
